@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+		height: 100vh;
+}
+
+.cursor{
+	width: 20px;
+	height: 20px;
+}
+
+#player-1-bat{
+    background: red;
+    top: 0px;
+}
+#player-2-bat{
+    background: purple;
+    bottom: 0px;
+}
+
+.bat{
+    width:200px;
+    height: 28px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 50vw;
+}
+#ball{
+    width:40px;
+    height: 40px;
+    border-radius: 20px;
+    background: orange;
+    position: absolute;
+    top: 28px;
+    left: 80px;
+    z-index: 2;
+    
+}
+.overlay{
+    opacity: 0.7 !important;
+    animation: none !important;
+    top: 0 !important;
+
+}
+#overlay, #not-for-mobile{
+    animation: disappear 2s;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    color: white; 
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    background-color: #2C3335;
+    width: 100vw;
+    height: 100vh;
+    top: -1000vh
+}
+
+@keyframes disappear{
+    0%{}
+    99%{opacity: 0.5}
+    100%{top: -1000vh}
+}
+
+#new-game-button{
+    display: inline-block;
+    background-color: black;
+    color: coral;
+    width: max-content;
+    font-size: 50px;
+}
+.score{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 4px;
+    z-index: -1;
+}
+#score-player-1{
+    top: 0;
+    color: purple;
+}
+#score-player-2{
+    bottom: 0;
+    right: 0;
+    color: red;
+}
+.disappear{
+	display: none;
+}
