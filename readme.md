@@ -1,4 +1,4 @@
-# Student Data Viewer
+# Ping Pong
 
 A Offline Two Player Ping Pong Game
 
